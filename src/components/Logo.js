@@ -1,7 +1,9 @@
 const Logo = (props) => (
   <img
     alt="Logo"
-    src="/static/logo.svg"
+    src="/static/images/LogoVirtus.png"
+    width="300px"
+    height="300px"
     {...props}
   />
 );

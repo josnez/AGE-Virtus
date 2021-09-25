@@ -1,52 +1,81 @@
 import {
   Box,
   Button,
-  Container, Link,
+  Container,
+  Link,
   TextField,
-  Typography
-} from '@material-ui/core';
-import { Formik } from 'formik';
-import { Helmet } from 'react-helmet';
-import { Link as RouterLink, useNavigate } from 'react-router-dom';
-import { firebaseIniciarSesion } from 'src/utils/FirebaseUtil';
-import * as Yup from 'yup';
+  Typography,
+} from "@material-ui/core";
+import { Formik } from "formik";
+import { Helmet } from "react-helmet";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
+import { firebaseIniciarSesion } from "src/utils/FirebaseUtil";
+// import { createTheme, ThemeProvider } from "@mui/material/styles";
+import * as Yup from "yup";
 
 const Login = () => {
   const navigate = useNavigate();
 
-  const iniciarSesion = async credenciales => {
-    let sesionIniciada = await firebaseIniciarSesion(credenciales.email, credenciales.password);
+  const iniciarSesion = async (credenciales) => {
+    let sesionIniciada = await firebaseIniciarSesion(
+      credenciales.email,
+      credenciales.password
+    );
 
     if (sesionIniciada) {
-      navigate('/app/dashboard', { replace: true });
+      navigate("/homeUser", { replace: true });
     } else {
-      alert('Las credenciales no son correctas');
+      alert("Las credenciales no son correctas");
     }
-  }
+  };
 
   return (
     <>
       <Helmet>
         <title>Iniciar sesion | AGE</title>
       </Helmet>
+      {/* <ThemeProvider theme={theme}>
+        <Grid container component="main" sx={{ height: "100vh" }} />
+        <CssBaseline />
+        <Grid
+          item
+          xs={false}
+          sm={4}
+          md={7}
+          sx={{
+            backgroundImage: "url(https://source.unsplash.com/random)",
+            backgroundRepeat: "no-repeat",
+            backgroundColor: (t) =>
+              t.palette.mode === "light"
+                ? t.palette.grey[50]
+                : t.palette.grey[900],
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+      </ThemeProvider> */}
       <Box
         sx={{
-          backgroundColor: 'background.default',
-          display: 'flex',
-          flexDirection: 'column',
-          height: '100%',
-          justifyContent: 'center'
+          backgroundColor: "background.default",
+          display: "flex",
+          flexDirection: "column",
+          height: "100%",
+          justifyContent: "center",
         }}
       >
         <Container maxWidth="sm">
           <Formik
             initialValues={{
-              email: 'demo@devias.io',
-              password: 'Password123'
+              
             }}
             validationSchema={Yup.object().shape({
-              email: Yup.string().email('Correo invalido').max(255).required('Ingresa un correo'),
-              password: Yup.string().max(255).required('Ingresa una contraseña')
+              email: Yup.string()
+                .email("Correo invalido")
+                .max(255)
+                .required("Ingresa un correo"),
+              password: Yup.string()
+                .max(255)
+                .required("Ingresa una contraseña"),
             })}
             onSubmit={iniciarSesion}
           >
@@ -57,14 +86,11 @@ const Login = () => {
               handleSubmit,
               isSubmitting,
               touched,
-              values
+              values,
             }) => (
               <form onSubmit={handleSubmit}>
                 <Box sx={{ mb: 3 }}>
-                  <Typography
-                    color="textPrimary"
-                    variant="h2"
-                  >
+                  <Typography color="textPrimary" variant="h2">
                     Iniciar Sesión
                   </Typography>
                   <Typography
@@ -114,13 +140,14 @@ const Login = () => {
                     Iniciar sesión
                   </Button>
                 </Box>
-                <Typography
-                  color="textSecondary"
-                  variant="body1"
-                >
-                  No tienes una cuenta?
-                  {' '}
-                  <Link component={RouterLink} to="/register" variant="h6" underline="hover">
+                <Typography color="textSecondary" variant="body1">
+                  No tienes una cuenta?{" "}
+                  <Link
+                    component={RouterLink}
+                    to="/register"
+                    variant="h6"
+                    underline="hover"
+                  >
                     Registrarse
                   </Link>
                 </Typography>
