@@ -12,6 +12,7 @@ import Register from './pages/Register';
 import Settings from './pages/Settings';
 import Home from './pages/Home';
 import HomeUser from './pages/HomeUser';
+import IngresoClass from './pages/IngresoClass';
 
 const routes = [
   {
@@ -37,7 +38,8 @@ const routes = [
       { path: '404', element: <NotFound /> },
       { path: '/', element: <Navigate to="/app/home" /> },
       { path: 'homeUser', element: <HomeUser /> },
-      { path: '*', element: <Navigate to="/404" /> }
+      { path: '*', element: <Navigate to="/404" /> },
+      { path: 'ingresoClase', element: <IngresoClass /> }
     ]
   }
 ];
