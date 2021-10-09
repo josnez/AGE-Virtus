@@ -13,6 +13,7 @@ import Settings from './pages/Settings';
 import Home from './pages/Home';
 import HomeUser from './pages/HomeUser';
 import IngresoClass from './pages/IngresoClass';
+import Activities from './pages/Activities';
 
 const routes = [
   {
@@ -27,7 +28,8 @@ const routes = [
       { path: 'home', element: <Home /> },
       { path: '*', element: <Navigate to="/404" /> } */
       { path: 'settings', element: <Settings /> },
-      { path: 'homeUser', element: <HomeUser /> }
+      { path: 'homeUser', element: <HomeUser /> },
+      { path: 'activities', element: <Activities /> }
     ]
   },
   {
