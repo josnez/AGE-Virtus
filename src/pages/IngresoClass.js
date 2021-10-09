@@ -47,7 +47,7 @@ import {
     return (
       <>
         <Helmet>
-          <title>Ingreso a Clases</title>
+          <title>Ingresar a  la Clase</title>
           
         </Helmet>
         
@@ -61,7 +61,7 @@ import {
           }}
         >
           <Typography align="center" color="textPrimary" variant="h1">
-            Ingreso Clases
+            Ingresar a la Clase
           </Typography>
 
 
@@ -128,22 +128,10 @@ import {
         </Box>
 
         <Box sx={{  display: "flex",
-                    justifyContent: "center"
+                    justifyContent: "center",
 
                      }}>
                   <Container maxWidth="sm" align="center">
-                  
-                  <Button
-                    color="primary"
-                    onClick={Ingresar}
-                    
-                    size="large"
-                    type="submit"
-                    variant="contained"
-                  >
-                    Ingresar
-                  </Button>
-                  <h>                                                                                           </h>
                   <Button
                     color="primary"
                     onClick={Volver}
@@ -154,6 +142,20 @@ import {
                   >
                     Volver
                   </Button>
+                  
+                  <h>                                                                                           </h>
+                  <Button
+                    color="primary"
+                    onClick={Ingresar}
+                    
+                    size="large"
+                    type="submit"
+                    variant="contained"
+                  >
+                    Ingresar
+                  </Button>
+
+                  
                   
                   </Container>
                 </Box>
