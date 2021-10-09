@@ -16,7 +16,7 @@ import * as Yup from "yup";
 const CourseCreation = () => {
   const navigate = useNavigate();
 
-  const crearCurso = (usuario) => {
+  const crearCurso = () => {
     // firebaseRegistrarUsuario(usuario.email, usuario.password);
     alert("El usuario creo un curso con éxito. Codigo curso: ");
     navigate("/app/homeUser", { replace: true });
@@ -63,8 +63,7 @@ const CourseCreation = () => {
               // policy: Yup.boolean().oneOf([true], 'Terminos y condiciones')
             })} */
             onSubmit={(usuario) => {
-              alert("asdas");
-              crearCurso(usuario);
+              crearCurso();
             }}
           >
             {({

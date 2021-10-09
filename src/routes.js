@@ -13,7 +13,9 @@ import Settings from './pages/Settings';
 import Home from './pages/Home';
 import HomeUser from './pages/HomeUser';
 import IngresoClass from './pages/IngresoClass';
+import Activities from './pages/Activities';
 import CourseCreation from './components/courses/CourseCreation';
+
 
 const routes = [
   {
@@ -29,14 +31,14 @@ const routes = [
       { path: '*', element: <Navigate to="/404" /> } */
       { path: 'settings', element: <Settings /> },
       { path: 'homeUser', element: <HomeUser /> },
-      { path: 'courseCreation', element: <CourseCreation /> }
+      { path: 'courseCreation', element: <CourseCreation /> },
+      { path: 'activities', element: <Activities /> }
     ]
   },
   {
     path: '/',
     element: <MainLayout />,
     children: [
-      { path: 'account', element: <Account /> },
       { path: 'customers', element: <CustomerList /> },
       { path: 'customer-new', element: <EditCustomer /> },
       { path: 'dashboard', element: <Dashboard /> },

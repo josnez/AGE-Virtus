@@ -4,22 +4,22 @@ import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-import CourseTeacher from "../components/courses/CourseTeacher";
-import CourseStudent from "../components/courses/CourseStudent";
+import ActivitiesTeacher from "../components/activities/ActivitiesTeacher";
+import ActivitiesStudent from "../components/activities/ActivitiesStudent";
 
 const HomeUser = () => {
-  const cambioActividades = () => {
-    navigate("/app/activities", { replace: true });
+  const cambioClases = () => {
+    navigate("/app/homeUser", { replace: true });
   };
   const navigate = useNavigate();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(1);
   const cerrarSesion = () => {
     navigate("/", { replace: true });
   };
   return (
     <>
       <Helmet>
-        <title>Inicio | AGE</title>
+        <title>Actividades | AGE</title>
       </Helmet>
       <Box
         sx={{
@@ -30,14 +30,18 @@ const HomeUser = () => {
           justifyContent: "center",
         }}
       >
-        <BottomNavigation
+        <BottomNavigation 
+          
           showLabels
           value={value}
-          onChange={(event, newValue) => {setValue(newValue);}}
+          onChange={(event, newValue) => {
+            setValue(newValue);
+          }}
+          
           
         >
-          <BottomNavigationAction label="Inicio" /* icon={<RestoreIcon />} */ />
-          <BottomNavigationAction onClick={cambioActividades} label="Actividades" /* icon={<FavoriteIcon />} */
+          <BottomNavigationAction onClick={cambioClases} label="Inicio" /* icon={<RestoreIcon />} */ />
+          <BottomNavigationAction label="Actividades" /* icon={<FavoriteIcon />} */
           />
         </BottomNavigation>
       </Box>
@@ -49,9 +53,9 @@ const HomeUser = () => {
         }}
       >
         <Container maxWidth="lg">
-          <CourseStudent />
+          <ActivitiesTeacher />
           <Box sx={{ pt: 3 }}>
-            <CourseTeacher />
+            <ActivitiesStudent />
           </Box>
         </Container>
       </Box>
