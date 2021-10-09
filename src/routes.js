@@ -17,6 +17,21 @@ import IngresoClass from './pages/IngresoClass';
 const routes = [
   {
     path: 'app',
+    element: <DashboardLayout />,
+    children: [
+      { path: 'account', element: <Account /> },
+      /* { path: 'customers', element: <CustomerList /> },
+      { path: 'customer-new', element: <EditCustomer /> },
+      { path: 'dashboard', element: <Dashboard /> },
+      { path: 'products', element: <ProductList /> },
+      { path: 'home', element: <Home /> },
+      { path: '*', element: <Navigate to="/404" /> } */
+      { path: 'settings', element: <Settings /> },
+      { path: 'homeUser', element: <HomeUser /> }
+    ]
+  },
+  {
+    path: '/',
     element: <MainLayout />,
     children: [
       { path: 'account', element: <Account /> },
@@ -24,20 +39,13 @@ const routes = [
       { path: 'customer-new', element: <EditCustomer /> },
       { path: 'dashboard', element: <Dashboard /> },
       { path: 'products', element: <ProductList /> },
-      { path: 'settings', element: <Settings /> },
       { path: 'home', element: <Home /> },
-      { path: '*', element: <Navigate to="/404" /> }
-    ]
-  },
-  {
-    path: '/',
-    element: <MainLayout />,
-    children: [
+
+
       { path: 'login', element: <Login /> },
       { path: 'register', element: <Register /> },
       { path: '404', element: <NotFound /> },
-      { path: '/', element: <Navigate to="/app/home" /> },
-      { path: 'homeUser', element: <HomeUser /> },
+      { path: '/', element: <Navigate to="/home" /> },
       { path: '*', element: <Navigate to="/404" /> },
       { path: 'ingresoClase', element: <IngresoClass /> }
     ]

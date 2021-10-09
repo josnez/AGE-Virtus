@@ -19,9 +19,11 @@ import {
   ShoppingBag as ShoppingBagIcon,
   User as UserIcon,
   UserPlus as UserPlusIcon,
-  Users as UsersIcon
+  Users as UsersIcon,
+  Logout as LogoutIcon
 } from 'react-feather';
 import NavItem from './NavItem';
+import { Logout } from '@material-ui/icons';
 
 const user = {
   avatar: '/static/images/avatars/avatar_6.png',
@@ -33,9 +35,9 @@ const items = [
   {
     href: '/app/dashboard',
     icon: BarChartIcon,
-    title: 'Dashboard'
+    title: 'Inicio'
   },
-  {
+  /* {
     href: '/app/customers',
     icon: UsersIcon,
     title: 'Customers'
@@ -44,13 +46,18 @@ const items = [
     href: '/app/products',
     icon: ShoppingBagIcon,
     title: 'Products'
-  },
+  }, */
   {
     href: '/app/account',
     icon: UserIcon,
-    title: 'Account'
+    title: 'Cuenta'
   },
   {
+    href: '/',
+    icon: Logout,
+    title: 'Cerrar sesión'
+  }
+  /* {
     href: '/app/settings',
     icon: SettingsIcon,
     title: 'Settings'
@@ -69,7 +76,7 @@ const items = [
     href: '/404',
     icon: AlertCircleIcon,
     title: 'Error'
-  }
+  } */
 ];
 
 const DashboardSidebar = ({ onMobileClose, openMobile }) => {
@@ -134,7 +141,7 @@ const DashboardSidebar = ({ onMobileClose, openMobile }) => {
         </List>
       </Box>
       <Box sx={{ flexGrow: 1 }} />
-      <Box
+      {/* <Box
         sx={{
           backgroundColor: 'background.default',
           m: 2,
@@ -170,7 +177,7 @@ const DashboardSidebar = ({ onMobileClose, openMobile }) => {
             See PRO version
           </Button>
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 
@@ -178,7 +185,7 @@ const DashboardSidebar = ({ onMobileClose, openMobile }) => {
     <>
       <Hidden lgUp>
         <Drawer
-          anchor="left"
+          anchor="right"
           onClose={onMobileClose}
           open={openMobile}
           variant="temporary"
@@ -193,7 +200,7 @@ const DashboardSidebar = ({ onMobileClose, openMobile }) => {
       </Hidden>
       <Hidden xlDown>
         <Drawer
-          anchor="left"
+          anchor="right"
           open
           variant="persistent"
           PaperProps={{
