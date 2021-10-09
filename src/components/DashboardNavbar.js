@@ -24,7 +24,7 @@ const DashboardNavbar = ({ onMobileNavOpen, ...rest }) => {
       {...rest}
     >
       <Toolbar>
-        <RouterLink to="/">
+        <RouterLink to="/app/homeUser">
           {/* <Logo /> */}<Typography color="white" variant="h4"> Ambiente de Gamificacion Epico</Typography>
         </RouterLink>
         <Box sx={{ flexGrow: 1 }} />

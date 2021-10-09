@@ -29,7 +29,7 @@ const AccountProfileDetails = (props) => {
   const [values, setValues] = useState({
     firstName: 'Nicolas',
     lastName: 'Andres',
-    email: 'niquita@andres.betplay',
+    email: 'juanitoalimania@revendo.nenitas.com',
     phone: '',
     state: 'Africa',
     country: 'Huila'
@@ -174,6 +174,7 @@ const AccountProfileDetails = (props) => {
           <Button
             color="primary"
             variant="contained"
+
           >
             Guardar Cambios
           </Button>

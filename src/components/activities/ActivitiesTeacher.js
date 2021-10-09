@@ -24,19 +24,21 @@ import {
             Ejercicio 5 programacion avanzada
           </Typography>
           <Grid container spacing={6} wrap="wrap"></Grid>
-        </CardContent>
-        <Divider />
-        <Box
+          <Box
           sx={{
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "right",
             p: 2,
           }}
         >
-          <Button color="primary" variant="contained">
+          <Button color="primary" variant="contained" >
             Eliminar Actividad
           </Button>
         </Box>
+        </CardContent>
+        
+        <Divider />
+        
       </Card>
     </form>
   );
