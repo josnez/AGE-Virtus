@@ -8,8 +8,11 @@ import ActivitiesTeacher from "../components/activities/ActivitiesTeacher";
 import ActivitiesStudent from "../components/activities/ActivitiesStudent";
 
 const HomeUser = () => {
+  const cambioClases = () => {
+    navigate("/app/homeUser", { replace: true });
+  };
   const navigate = useNavigate();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(1);
   const cerrarSesion = () => {
     navigate("/", { replace: true });
   };
@@ -27,16 +30,18 @@ const HomeUser = () => {
           justifyContent: "center",
         }}
       >
-        <BottomNavigation
+        <BottomNavigation 
+          
           showLabels
           value={value}
           onChange={(event, newValue) => {
             setValue(newValue);
           }}
+          
+          
         >
-          <BottomNavigationAction label="Inicio" /* icon={<RestoreIcon />} */ />
-          <BottomNavigationAction
-            label="Actividades" /* icon={<FavoriteIcon />} */
+          <BottomNavigationAction onClick={cambioClases} label="Inicio" /* icon={<RestoreIcon />} */ />
+          <BottomNavigationAction label="Actividades" /* icon={<FavoriteIcon />} */
           />
         </BottomNavigation>
       </Box>

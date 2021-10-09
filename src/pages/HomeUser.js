@@ -8,6 +8,9 @@ import CourseTeacher from "../components/courses/CourseTeacher";
 import CourseStudent from "../components/courses/CourseStudent";
 
 const HomeUser = () => {
+  const cambioActividades = () => {
+    navigate("/app/activities", { replace: true });
+  };
   const navigate = useNavigate();
   const [value, setValue] = React.useState(0);
   const cerrarSesion = () => {
@@ -30,13 +33,11 @@ const HomeUser = () => {
         <BottomNavigation
           showLabels
           value={value}
-          onChange={(event, newValue) => {
-            setValue(newValue);
-          }}
+          onChange={(event, newValue) => {setValue(newValue);}}
+          
         >
           <BottomNavigationAction label="Inicio" /* icon={<RestoreIcon />} */ />
-          <BottomNavigationAction
-            label="Actividades" /* icon={<FavoriteIcon />} */
+          <BottomNavigationAction onClick={cambioActividades} label="Actividades" /* icon={<FavoriteIcon />} */
           />
         </BottomNavigation>
       </Box>
