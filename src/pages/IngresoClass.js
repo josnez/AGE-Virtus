@@ -16,11 +16,14 @@ import {
   
   const IngresoClass = () => {
     
-    const rutas = ["https://img.lalr.co/cms/2018/10/10100631/Leonel-Messi-1.jpg?size=xl","https://bolavip.com/__export/1632990485189/sites/bolavip/img/2021/09/30/getty_images_-_2021-09-30t102606_472.jpg_1055622710.jpg"];
+    const rutas = ["https://i.ibb.co/5nn4DwR/Mage.png","https://i.ibb.co/PTZYFxm/Warrior.png"];
 
     const navigate = useNavigate();
     const Ingresar = ()=> {
       navigate("/", { replace: true });
+    }
+    const Volver = () => {
+      navigate("/homeUser", { replace: true });
     }
     var cont =0;
     const cambiar = () => {
@@ -40,7 +43,9 @@ import {
       <>
         <Helmet>
           <title>Ingreso a Clases</title>
+          
         </Helmet>
+        
         <Box
           sx={{
             backgroundColor: "background.default",
@@ -53,6 +58,8 @@ import {
           <Typography align="center" color="textPrimary" variant="h1">
             Ingreso Clases
           </Typography>
+
+
           
         </Box>
 
@@ -61,12 +68,12 @@ import {
             backgroundColor: "background.default",
             display: "flex",
             flexDirection: "row",
-            height: "40%",
+            height: "50%",
             justifyContent: "center",
           }}
         >
-          <Container maxWidth="sm" align="left">
-            <Typography align="left" color="textPrimary" variant="subtitle1">
+          <Container maxWidth="sm" align="center">
+            <Typography align="center" color="textPrimary" variant="subtitle1">
               Ingrese el codigo para registrarse en la clase:
             </Typography>
             
@@ -76,7 +83,7 @@ import {
 
           </Container>
 
-          <Box sx={{ py: 2 }}>
+          <Box sx={{ py: 15  }}>
                   <Button
                     color="primary"
                     onClick={cambiar}
@@ -89,10 +96,15 @@ import {
                   </Button>
                 </Box>
           
-              
-          <img id="imagen" style={{maxWidth: '200px'}} src={rutas[cont]}  />
-              
-          <Box sx={{ py: 2 }}>
+          <Container maxWidth="sm" align="center">
+          <Typography align="center" color="textPrimary" variant="subtitle1">
+              Seleccione el personaje:
+          </Typography>
+
+            <img id="imagen" style={{maxWidth: '200px'}} src={rutas[cont]}  />
+          </Container>
+          <Box sx={{ py: 15,
+                       }}>
                   <Button
                     color="primary"
                     onClick={cambiar}
@@ -112,7 +124,10 @@ import {
 
         <Box sx={{  display: "flex",
                     justifyContent: "center"
+
                      }}>
+                  <Container maxWidth="sm" align="center">
+                  
                   <Button
                     color="primary"
                     onClick={Ingresar}
@@ -123,6 +138,19 @@ import {
                   >
                     Ingresar
                   </Button>
+                  <h>                                                                                           </h>
+                  <Button
+                    color="primary"
+                    onClick={Volver}
+                    
+                    size="large"
+                    type="submit"
+                    variant="contained"
+                  >
+                    Volver
+                  </Button>
+                  
+                  </Container>
                 </Box>
 
         
