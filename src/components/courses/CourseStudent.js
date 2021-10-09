@@ -4,15 +4,21 @@ import {
   Card,
   CardContent,
   CardHeader,
-  Checkbox,
   Divider,
-  FormControlLabel,
   Grid,
   Typography,
 } from "@material-ui/core";
 
-const CourseStudent = (props) => (
-  <form {...props}>
+import { Link as RouterLink, useNavigate } from "react-router-dom";
+
+const CourseStudent = (props) => {
+  const navigate = useNavigate();
+  const crearCurso = () => {
+    navigate("/ingresoClase", { replace: true });
+  };
+  return(
+    <>
+    <form {...props}>
     <Card>
       <CardHeader
         subheader="Gestiona los cursos en los que eres maestro"
@@ -33,12 +39,15 @@ const CourseStudent = (props) => (
           p: 2,
         }}
       >
-        <Button color="primary" variant="contained">
+        <Button color="primary" variant="contained" onClick={crearCurso}>
           Agregar curso
         </Button>
       </Box>
     </Card>
   </form>
-);
+    </>
+  );
+  
+};
 
 export default CourseStudent;

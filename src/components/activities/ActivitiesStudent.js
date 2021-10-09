@@ -26,17 +26,6 @@ const ActivitiesStudent = (props) => (
         <Grid container spacing={6} wrap="wrap"></Grid>
       </CardContent>
       <Divider />
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          p: 2,
-        }}
-      >
-        <Button color="primary" variant="contained">
-          .
-        </Button>
-      </Box>
     </Card>
   </form>
 );

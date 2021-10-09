@@ -34,7 +34,7 @@ import {
           }}
         >
           <Button color="primary" variant="contained">
-            .
+            Eliminar Actividad
           </Button>
         </Box>
       </Card>
