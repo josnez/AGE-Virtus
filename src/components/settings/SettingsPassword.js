@@ -1,4 +1,4 @@
-import { useState } from 'react';
+ import { useState } from 'react';
 import {
   Box,
   Button,
@@ -26,14 +26,14 @@ const SettingsPassword = (props) => {
     <form {...props}>
       <Card>
         <CardHeader
-          subheader="Update password"
-          title="Password"
+          subheader="Cambiar Contraseña"
+          title="Contraseña"
         />
         <Divider />
         <CardContent>
           <TextField
             fullWidth
-            label="Password"
+            label="Contraseña"
             margin="normal"
             name="password"
             onChange={handleChange}
@@ -43,7 +43,7 @@ const SettingsPassword = (props) => {
           />
           <TextField
             fullWidth
-            label="Confirm password"
+            label="Confirmar Contraseña"
             margin="normal"
             name="confirm"
             onChange={handleChange}
@@ -64,7 +64,7 @@ const SettingsPassword = (props) => {
             color="primary"
             variant="contained"
           >
-            Update
+            Cambiar Contraseña
           </Button>
         </Box>
       </Card>

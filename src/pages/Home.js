@@ -6,21 +6,21 @@ import {
   TextField,
   Typography,
 } from "@material-ui/core";
-import ButtonGroup from '@material-ui/core/ButtonGroup';
+import ButtonGroup from "@material-ui/core/ButtonGroup";
 import { Formik } from "formik";
 import { Helmet } from "react-helmet";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { firebaseIniciarSesion } from "src/utils/FirebaseUtil";
 import * as Yup from "yup";
 
 const Home = () => {
   const navigate = useNavigate();
-  const pasarAlogin = ()=> {
+  const pasarAlogin = () => {
     navigate("/login", { replace: true });
-  }
-  const pasarARegistro = ()=> {
+  };
+  const pasarARegistro = () => {
     navigate("/register", { replace: true });
-  }
+  };
   return (
     <>
       <Helmet>
@@ -42,20 +42,19 @@ const Home = () => {
           Gamificación del aula de clases
         </Typography>
         <Container>
-        <Typography
-          variant="h5"
-          align="justify"
-          color="textSecondary"
-          paragraph
-        >
-          Por medio de la gamificación se busca una experiencia mas atractiva
-          para los estudiantes al momento de atender a las clases.Con esta
-          herramienta se le facilitara crear y administrar un ambiente
-          gamificado para sus clases.{" "}
-        </Typography>
-
+          <Typography
+            variant="h5"
+            align="justify"
+            color="textSecondary"
+            paragraph
+          >
+            Por medio de la gamificación se busca una experiencia mas atractiva
+            para los estudiantes al momento de atender a las clases.Con esta
+            herramienta se le facilitara crear y administrar un ambiente
+            gamificado para sus clases.{" "}
+          </Typography>
         </Container>
-        <Container maxWidth="sm" align="center">          
+        <Container maxWidth="sm" align="center">
           <ButtonGroup
             color="primary"
             aria-label="outlined primary button group"
