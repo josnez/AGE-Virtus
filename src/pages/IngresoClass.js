@@ -20,7 +20,12 @@ import {
 
     const navigate = useNavigate();
     const Ingresar = ()=> {
+      var elemento = document.getElementById("codigo");
+      if(elemento.value==""){
+        alert("Ingrese un codigo");
+      }else{
       navigate("/", { replace: true });
+      }
     }
     const Volver = () => {
       navigate("/homeUser", { replace: true });
@@ -77,7 +82,7 @@ import {
               Ingrese el codigo para registrarse en la clase:
             </Typography>
             
-            <TextField
+            <TextField id="codigo"
                 label = "Codigo de clase"
             />
 
