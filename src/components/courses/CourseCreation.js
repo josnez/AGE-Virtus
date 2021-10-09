@@ -16,49 +16,30 @@ import * as Yup from "yup";
 const CourseCreation = () => {
   const navigate = useNavigate();
 
-  const crearCurso = (usuario) => {
+  const crearCurso = () => {
     // firebaseRegistrarUsuario(usuario.email, usuario.password);
-    alert("El usuario creo un curso con éxito.")
-    navigate('/app/homeUser', { replace: true });
-  }
+    alert("El usuario creo un curso con éxito. Codigo curso: ");
+    navigate("/app/homeUser", { replace: true });
+  };
 
   return (
     <>
       <Helmet>
-        <title>Iniciar sesion | AGE</title>
+        <title>Crear curso | AGE</title>
       </Helmet>
-      {/* <ThemeProvider theme={theme}>
-          <Grid container component="main" sx={{ height: "100vh" }} />
-          <CssBaseline />
-          <Grid
-            item
-            xs={false}
-            sm={4}
-            md={7}
-            sx={{
-              backgroundImage: "url(https://source.unsplash.com/random)",
-              backgroundRepeat: "no-repeat",
-              backgroundColor: (t) =>
-                t.palette.mode === "light"
-                  ? t.palette.grey[50]
-                  : t.palette.grey[900],
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
-        </ThemeProvider> */}
+      
       <Box
         sx={{
           backgroundColor: "background.default",
           display: "flex",
           flexDirection: "column",
-          height: "100%",
+          height: "150%",
           justifyContent: "center",
         }}
       >
         <Container maxWidth="sm">
           <Formik
-            initialValues={{
+            /* initialValues={{
               email: "",
               firstName: "",
               lastName: "",
@@ -80,9 +61,9 @@ const CourseCreation = () => {
                 .max(255)
                 .required("Ingresa una contraseña"),
               // policy: Yup.boolean().oneOf([true], 'Terminos y condiciones')
-            })}
+            })} */
             onSubmit={(usuario) => {
-              crearCurso(usuario);
+              crearCurso();
             }}
           >
             {({
@@ -108,19 +89,6 @@ const CourseCreation = () => {
                   </Typography>
                 </Box>
 
-                {/* <TextField
-                    error={Boolean(touched.email && errors.email)}
-                    fullWidth
-                    helperText={touched.email && errors.email}
-                    label="Correo electronico"
-                    margin="normal"
-                    name="email"
-                    onBlur={handleBlur}
-                    onChange={handleChange}
-                    type="email"
-                    value={values.email}
-                    variant="outlined"
-                  /> */}
                 <TextField
                   // error={Boolean(touched.email && errors.email)}
                   fullWidth
@@ -131,7 +99,7 @@ const CourseCreation = () => {
                   onBlur={handleBlur}
                   onChange={handleChange}
                   type="text"
-                  value={values.areaCurso}
+                  // value={values.areaCurso}
                   variant="outlined"
                 />
                 <TextField
@@ -144,7 +112,7 @@ const CourseCreation = () => {
                   onBlur={handleBlur}
                   onChange={handleChange}
                   type="text"
-                  value={values.nombreCurso}
+                  // value={values.nombreCurso}
                   variant="outlined"
                 />
                 <TextField
@@ -157,7 +125,7 @@ const CourseCreation = () => {
                   onBlur={handleBlur}
                   onChange={handleChange}
                   type="text"
-                  value={values.administradoresCurso}
+                  // value={values.administradoresCurso}
                   variant="outlined"
                 />
                 <TextField
@@ -172,7 +140,7 @@ const CourseCreation = () => {
                   onBlur={handleBlur}
                   onChange={handleChange}
                   type="text"
-                  value={values.descripcionCurso}
+                  // value={values.descripcionCurso}
                   variant="outlined"
                 />
                 <TextField
@@ -185,9 +153,10 @@ const CourseCreation = () => {
                   onBlur={handleBlur}
                   onChange={handleChange}
                   type="text"
-                  value={values.invitadosCurso}
+                  // value={values.invitadosCurso}
                   variant="outlined"
                 />
+
                 <Box sx={{ py: 2 }}>
                   <Button
                     color="primary"

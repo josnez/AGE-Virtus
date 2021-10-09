@@ -23,7 +23,7 @@ const Login = () => {
     );
 
     if (sesionIniciada) {
-      navigate("/homeUser", { replace: true });
+      navigate("/app/homeUser", { replace: true });
     } else {
       alert("Las credenciales no son correctas");
     }

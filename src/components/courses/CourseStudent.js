@@ -14,7 +14,7 @@ import { Link as RouterLink, useNavigate } from "react-router-dom";
 const CourseStudent = (props) => {
   const navigate = useNavigate();
   const crearCurso = () => {
-    navigate("/ingresoClase", { replace: true });
+    navigate("/app/courseCreation", { replace: true });
   };
   return(
     <>

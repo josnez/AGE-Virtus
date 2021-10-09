@@ -31,6 +31,7 @@ const routes = [
       { path: '*', element: <Navigate to="/404" /> } */
       { path: 'settings', element: <Settings /> },
       { path: 'homeUser', element: <HomeUser /> },
+      { path: 'courseCreation', element: <CourseCreation /> },
       { path: 'activities', element: <Activities /> }
     ]
   },
@@ -38,7 +39,6 @@ const routes = [
     path: '/',
     element: <MainLayout />,
     children: [
-      { path: 'account', element: <Account /> },
       { path: 'customers', element: <CustomerList /> },
       { path: 'customer-new', element: <EditCustomer /> },
       { path: 'dashboard', element: <Dashboard /> },
@@ -51,8 +51,7 @@ const routes = [
       { path: '404', element: <NotFound /> },
       { path: '/', element: <Navigate to="/home" /> },
       { path: '*', element: <Navigate to="/404" /> },
-      { path: 'ingresoClase', element: <IngresoClass /> },
-      { path: 'courseCreation', element: <CourseCreation /> }
+      { path: 'ingresoClase', element: <IngresoClass /> }
     ]
   }
 ];
