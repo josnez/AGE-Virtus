@@ -13,6 +13,7 @@ import Settings from './pages/Settings';
 import Home from './pages/Home';
 import HomeUser from './pages/HomeUser';
 import IngresoClass from './pages/IngresoClass';
+import CourseCreation from './components/courses/CourseCreation';
 
 const routes = [
   {
@@ -47,7 +48,8 @@ const routes = [
       { path: '404', element: <NotFound /> },
       { path: '/', element: <Navigate to="/home" /> },
       { path: '*', element: <Navigate to="/404" /> },
-      { path: 'ingresoClase', element: <IngresoClass /> }
+      { path: 'ingresoClase', element: <IngresoClass /> },
+      { path: 'courseCreation', element: <CourseCreation /> }
     ]
   }
 ];
