@@ -26,14 +26,14 @@ import NavItem from './NavItem';
 import { Logout } from '@material-ui/icons';
 
 const user = {
-  avatar: '/static/images/avatars/avatar_6.png',
-  jobTitle: 'Senior Developer',
-  name: 'Katarina Smith'
+  avatar: '/static/images/avatars/avatar_12.jpeg',
+  jobTitle: 'Estudiante de Artes',
+  name: 'Nicolas Andres'
 };
 
 const items = [
   {
-    href: '/app/dashboard',
+    href: '/app/homeUser',
     icon: BarChartIcon,
     title: 'Inicio'
   },

@@ -28,7 +28,8 @@ const routes = [
       { path: 'home', element: <Home /> },
       { path: '*', element: <Navigate to="/404" /> } */
       { path: 'settings', element: <Settings /> },
-      { path: 'homeUser', element: <HomeUser /> }
+      { path: 'homeUser', element: <HomeUser /> },
+      { path: 'courseCreation', element: <CourseCreation /> }
     ]
   },
   {
@@ -48,8 +49,7 @@ const routes = [
       { path: '404', element: <NotFound /> },
       { path: '/', element: <Navigate to="/home" /> },
       { path: '*', element: <Navigate to="/404" /> },
-      { path: 'ingresoClase', element: <IngresoClass /> },
-      { path: 'courseCreation', element: <CourseCreation /> }
+      { path: 'ingresoClase', element: <IngresoClass /> }
     ]
   }
 ];

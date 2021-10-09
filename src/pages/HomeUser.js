@@ -35,9 +35,7 @@ const HomeUser = () => {
           }}
         >
           <BottomNavigationAction label="Inicio" /* icon={<RestoreIcon />} */ />
-          <BottomNavigationAction
-            label="Actividades" /* icon={<FavoriteIcon />} */
-          />
+          <BottomNavigationAction label="Actividades" /* icon={<FavoriteIcon />} */ />
         </BottomNavigation>
       </Box>
       <Box
